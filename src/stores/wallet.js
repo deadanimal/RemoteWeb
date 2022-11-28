@@ -78,7 +78,7 @@ export const useWalletStore = defineStore({
       for (let i = 0; i < this.mnemonics.length; i++) {
         var oneWallet = await DirectSecp256k1HdWallet.fromMnemonic(this.mnemonics[i]);
         const [oneAccount] = await oneWallet.getAccounts();
-        const client = await SigningStargateClient.connectWithSigner("rpc.atomicmoney.org", oneWallet);
+        const client = await SigningStargateClient.connectWithSigner("wss://rpc.atomicmoney.org", oneWallet);
         const before = await client.getBalance(oneAccount.address, "udollar");
         var balanceValue = parseInt(before['amount']) / Math.pow(10, 6);
         this.balances.push(balanceValue.toFixed(3));
@@ -89,7 +89,7 @@ export const useWalletStore = defineStore({
       var oneWallet = await DirectSecp256k1HdWallet.fromMnemonic(this.mnemonics[this.walletIndex]);
       transferAmount = (parseFloat(transferAmount) * Math.pow(10,6)).toString()
       const [oneAccount] = await oneWallet.getAccounts();
-      const client = await SigningStargateClient.connectWithSigner("rpc.atomicmoney.org", oneWallet);
+      const client = await SigningStargateClient.connectWithSigner("wss://rpc.atomicmoney.org", oneWallet);
       const result = await client.sendTokens(
         oneAccount.address,
         transferRecipient,
