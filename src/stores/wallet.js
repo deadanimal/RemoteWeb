@@ -112,6 +112,7 @@ export const useWalletStore = defineStore({
     },
 
     async sendToken(transferRecipient, transferAmount, transferMemo = "") {
+      console.log("Sending token, ", transferAmount, " to ", transferRecipient, " with memo: ", transferMemo);
       var oneWallet = await DirectSecp256k1HdWallet.fromMnemonic(this.mnemonics[this.walletIndex]);
       transferAmount = (parseFloat(transferAmount) * Math.pow(10, 6)).toString()
       const [oneAccount] = await oneWallet.getAccounts();
