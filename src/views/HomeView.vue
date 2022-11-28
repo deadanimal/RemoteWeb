@@ -125,14 +125,10 @@ export default {
 
             <div class="card mt-3" v-if="walletStore.pinCode != null">
                 <div class="card-header">
-                    Create Wallet
-                </div>
-                <button class="btn btn-primary" @click="createWallet()">Create Wallet</button>
-            </div>
+                    Wallet
+                    <i @click="createWallet()" class="bi bi-plus-circle mx-3"></i>
 
-            <div class="card mt-3" v-if="walletStore.pinCode != null">
-                <div class="card-header">
-                    Import Wallet
+
                 </div>
                 <div class="card-body">
                     <textarea class="form-control" v-model="mnemonic" placeholder="Mnemonic"></textarea>
