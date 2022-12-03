@@ -27,10 +27,10 @@ export default {
         <ul class="navbar-nav me-auto">
           <!-- <li class="nav-item">
             <RouterLink class="nav-link" to="/">Home</RouterLink>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/transfer">Transfer</a>
           </li> -->
+          <li class="nav-item">
+            <a class="nav-link" href="/transfers">Transfer</a>
+          </li> 
           <li class="nav-item">
             <RouterLink class="nav-link" to="/wallets">Wallet</RouterLink>
           </li> 

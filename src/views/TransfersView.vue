@@ -10,7 +10,7 @@ import { useWalletStore } from '../stores/wallet';
 
 
 export default {
-    name: 'about',
+    name: 'transfers',
     setup() {
         const walletStore = useWalletStore();
         return { walletStore };

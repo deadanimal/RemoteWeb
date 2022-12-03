@@ -148,7 +148,8 @@ export const useWalletStore = defineStore({
       // console.log(result);           
     },
 
-    async rejectTransaction(index) {}
+    async rejectTransaction(index) {      
+    }
 
 
 

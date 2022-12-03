@@ -1,5 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
+import TransfersView from '../views/TransfersView.vue'
 import WalletsView from '../views/WalletsView.vue'
 
 const router = createRouter({
@@ -10,6 +11,11 @@ const router = createRouter({
       name: 'home',
       component: HomeView
     },
+    {
+      path: '/transfers',
+      name: 'transfers',
+      component: TransfersView
+    },       
     {
       path: '/wallets',
       name: 'wallets',
