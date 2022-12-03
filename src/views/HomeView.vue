@@ -159,7 +159,7 @@ export default {
                             </tr>
                         </thead>
                         <tbody>
-                            <tr class="table-active" v-for="(wallet, index) in walletStore.wallets">
+                            <tr v-for="(wallet, index) in walletStore.wallets">
                                 <!-- <th scope="row">Active</th> -->
                                 <td>
                                     {{ wallet }}
